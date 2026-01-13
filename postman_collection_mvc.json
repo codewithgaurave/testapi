@@ -1,0 +1,123 @@
+{
+  "info": {
+    "name": "Text APIs Collection - MVC",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User Profile",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"+1234567890\",\n  \"bio\": \"Software Developer with 5 years experience\",\n  \"age\": \"28\",\n  \"city\": \"New York\",\n  \"country\": \"USA\",\n  \"profession\": \"Full Stack Developer\",\n  \"experience\": \"5 years\",\n  \"skills\": \"JavaScript, React, Node.js\",\n  \"website\": \"https://johndoe.dev\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/user",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "user"]
+        }
+      }
+    },
+    {
+      "name": "Create Blog Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My First Blog Post\",\n  \"content\": \"This is the content of my first blog post about web development\",\n  \"author\": \"John Doe\",\n  \"category\": \"Technology\",\n  \"tags\": \"javascript, web development, programming\",\n  \"summary\": \"A comprehensive guide to web development\",\n  \"readTime\": \"5 minutes\",\n  \"status\": \"published\",\n  \"featured\": \"true\",\n  \"metaTitle\": \"Web Development Guide\",\n  \"metaDescription\": \"Learn web development basics\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/blog",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "blog"]
+        }
+      }
+    },
+    {
+      "name": "Add Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"comment\": \"Great article! Very helpful information.\",\n  \"author\": \"Jane Smith\",\n  \"email\": \"jane@example.com\",\n  \"postId\": \"123\",\n  \"parentId\": \"0\",\n  \"rating\": \"5\",\n  \"status\": \"approved\",\n  \"ipAddress\": \"192.168.1.1\",\n  \"userAgent\": \"Mozilla/5.0\",\n  \"isVerified\": \"true\",\n  \"likes\": \"10\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/comment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "comment"]
+        }
+      }
+    },
+    {
+      "name": "Create Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Meeting Notes\",\n  \"description\": \"Discussed project timeline and deliverables for Q1\",\n  \"category\": \"Work\",\n  \"priority\": \"High\",\n  \"tags\": \"meeting, project, timeline\",\n  \"color\": \"blue\",\n  \"reminder\": \"2024-01-15T10:00:00Z\",\n  \"isArchived\": \"false\",\n  \"isPublic\": \"false\",\n  \"attachments\": \"document.pdf\",\n  \"collaborators\": \"john@example.com, jane@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/note",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "note"]
+        }
+      }
+    },
+    {
+      "name": "Submit Feedback",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"feedback\": \"The service was excellent and very user-friendly\",\n  \"rating\": \"5 stars\",\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice@example.com\",\n  \"phone\": \"+1987654321\",\n  \"subject\": \"Service Quality\",\n  \"category\": \"Customer Service\",\n  \"priority\": \"Medium\",\n  \"status\": \"Open\",\n  \"department\": \"Support\",\n  \"source\": \"Website\",\n  \"isAnonymous\": \"false\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/feedback",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "feedback"]
+        }
+      }
+    }
+  ]
+}
