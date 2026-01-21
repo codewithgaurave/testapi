@@ -11,27 +11,41 @@ const imageController = {
         });
       }
 
-      const result = await cloudinary.uploader.upload(req.file.path, {
-        folder: 'testapi_images'
-      });
+      const result = await cloudinary.uploader.upload_stream(
+        {
+          folder: 'testapi_images',
+          resource_type: 'image'
+        },
+        (error, result) => {
+          if (error) {
+            return res.status(400).json({
+              success: false,
+              message: 'Error uploading to Cloudinary',
+              error: error.message
+            });
+          }
 
-      const imageData = {
-        ...req.body,
-        imageUrl: result.secure_url,
-        publicId: result.public_id,
-        size: result.bytes,
-        format: result.format,
-        width: result.width,
-        height: result.height
-      };
+          const imageData = {
+            ...req.body,
+            imageUrl: result.secure_url,
+            publicId: result.public_id,
+            size: result.bytes,
+            format: result.format,
+            width: result.width,
+            height: result.height
+          };
 
-      const image = new Image(imageData);
-      
-      res.status(201).json({
-        success: true,
-        message: 'Image uploaded successfully',
-        data: image
-      });
+          const image = new Image(imageData);
+          
+          res.status(201).json({
+            success: true,
+            message: 'Image uploaded successfully',
+            data: image
+          });
+        }
+      );
+
+      result.end(req.file.buffer);
     } catch (error) {
       res.status(400).json({
         success: false,
