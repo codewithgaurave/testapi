@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "Image Upload API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "title",
+              "value": "My Test Image",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Testing image upload with Cloudinary",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Test Category",
+              "type": "text"
+            },
+            {
+              "key": "tags",
+              "value": "test, upload, cloudinary",
+              "type": "text"
+            },
+            {
+              "key": "uploadedBy",
+              "value": "John Doe",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/image",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "image"]
+        }
+      }
+    }
+  ]
+}

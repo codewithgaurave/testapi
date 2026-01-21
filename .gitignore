@@ -39,6 +39,5 @@ Thumbs.db
 *.swp
 *.swo
 
-# Build outputs
-dist/
-build/
+# Uploads folder
+uploads/
