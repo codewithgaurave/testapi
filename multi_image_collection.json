@@ -1,0 +1,413 @@
+{
+  "info": {
+    "name": "Multi Image Upload APIs Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Product (2 Images)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "name",
+              "value": "iPhone 15 Pro",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Latest iPhone with advanced features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "999",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Electronics",
+              "type": "text"
+            },
+            {
+              "key": "brand",
+              "value": "Apple",
+              "type": "text"
+            },
+            {
+              "key": "stock",
+              "value": "50",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/product",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "product"]
+        }
+      }
+    },
+    {
+      "name": "Create Gallery (8 Images)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "title",
+              "value": "Wedding Photography",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Beautiful wedding moments captured",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Wedding",
+              "type": "text"
+            },
+            {
+              "key": "event",
+              "value": "John & Jane Wedding",
+              "type": "text"
+            },
+            {
+              "key": "location",
+              "value": "New York",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "2024-06-15",
+              "type": "text"
+            },
+            {
+              "key": "photographer",
+              "value": "Mike Johnson",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/gallery",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "gallery"]
+        }
+      }
+    },
+    {
+      "name": "Create Property (4 Images)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "title",
+              "value": "Luxury Villa",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Beautiful 3BHK villa with modern amenities",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "500000",
+              "type": "text"
+            },
+            {
+              "key": "location",
+              "value": "California",
+              "type": "text"
+            },
+            {
+              "key": "type",
+              "value": "Villa",
+              "type": "text"
+            },
+            {
+              "key": "bedrooms",
+              "value": "3",
+              "type": "text"
+            },
+            {
+              "key": "bathrooms",
+              "value": "2",
+              "type": "text"
+            },
+            {
+              "key": "area",
+              "value": "2500 sq ft",
+              "type": "text"
+            },
+            {
+              "key": "agent",
+              "value": "Sarah Wilson",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/property",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "property"]
+        }
+      }
+    },
+    {
+      "name": "Create Recipe (3 Images)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "name",
+              "value": "Chicken Biryani",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Authentic Hyderabadi chicken biryani",
+              "type": "text"
+            },
+            {
+              "key": "ingredients",
+              "value": "Chicken, Rice, Spices, Onions",
+              "type": "text"
+            },
+            {
+              "key": "instructions",
+              "value": "Cook chicken, prepare rice, layer and cook",
+              "type": "text"
+            },
+            {
+              "key": "cookTime",
+              "value": "90 minutes",
+              "type": "text"
+            },
+            {
+              "key": "servings",
+              "value": "4",
+              "type": "text"
+            },
+            {
+              "key": "difficulty",
+              "value": "Medium",
+              "type": "text"
+            },
+            {
+              "key": "cuisine",
+              "value": "Indian",
+              "type": "text"
+            },
+            {
+              "key": "chef",
+              "value": "Chef Ramesh",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/recipe",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "recipe"]
+        }
+      }
+    },
+    {
+      "name": "Create Portfolio (6 Images)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "title",
+              "value": "E-commerce Website Design",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Modern e-commerce platform with responsive design",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Web Design",
+              "type": "text"
+            },
+            {
+              "key": "client",
+              "value": "TechCorp Inc",
+              "type": "text"
+            },
+            {
+              "key": "projectDate",
+              "value": "2024-03-15",
+              "type": "text"
+            },
+            {
+              "key": "technologies",
+              "value": "React, Node.js, MongoDB",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "Completed",
+              "type": "text"
+            },
+            {
+              "key": "designer",
+              "value": "Alex Smith",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/portfolio",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "portfolio"]
+        }
+      }
+    }
+  ]
+}

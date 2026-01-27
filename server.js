@@ -15,6 +15,7 @@ const commentRoutes = require('./routes/commentRoutes');
 const noteRoutes = require('./routes/noteRoutes');
 const feedbackRoutes = require('./routes/feedbackRoutes');
 const imageRoutes = require('./routes/imageRoutes');
+const multiImageRoutes = require('./routes/multiImageRoutes');
 
 app.use(express.json());
 
@@ -25,6 +26,7 @@ app.use('/api', commentRoutes);
 app.use('/api', noteRoutes);
 app.use('/api', feedbackRoutes);
 app.use('/api', imageRoutes);
+app.use('/api', multiImageRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server running on port ${process.env.PORT || 3000}`);

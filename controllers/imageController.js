@@ -11,6 +11,15 @@ const imageController = {
         });
       }
 
+      // Check if Cloudinary is configured
+      if (!process.env.CLOUDINARY_CLOUD_NAME || !process.env.CLOUDINARY_API_KEY || !process.env.CLOUDINARY_API_SECRET) {
+        return res.status(500).json({
+          success: false,
+          message: 'Cloudinary configuration missing',
+          error: 'Environment variables not set'
+        });
+      }
+
       // Convert buffer to base64
       const b64 = Buffer.from(req.file.buffer).toString('base64');
       const dataURI = 'data:' + req.file.mimetype + ';base64,' + b64;
@@ -38,6 +47,7 @@ const imageController = {
         data: image
       });
     } catch (error) {
+      console.error('Image upload error:', error);
       res.status(400).json({
         success: false,
         message: 'Error uploading image',
