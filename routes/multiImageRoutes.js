@@ -26,4 +26,18 @@ router.get('/properties', multiImageController.getAllProperties);
 router.get('/recipes', multiImageController.getAllRecipes);
 router.get('/portfolios', multiImageController.getAllPortfolios);
 
+// PUT routes
+router.put('/product/:id', multiImageController.updateProduct);
+router.put('/gallery/:id', multiImageController.updateGallery);
+router.put('/property/:id', multiImageController.updateProperty);
+router.put('/recipe/:id', multiImageController.updateRecipe);
+router.put('/portfolio/:id', multiImageController.updatePortfolio);
+
+// DELETE routes
+router.delete('/product/:id', multiImageController.deleteProduct);
+router.delete('/gallery/:id', multiImageController.deleteGallery);
+router.delete('/property/:id', multiImageController.deleteProperty);
+router.delete('/recipe/:id', multiImageController.deleteRecipe);
+router.delete('/portfolio/:id', multiImageController.deletePortfolio);
+
 module.exports = router;

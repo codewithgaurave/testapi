@@ -478,49 +478,179 @@
           "path": ["api", "portfolios"]
         }
       }
-    }
-  ]
-}mmerce platform with responsive design",
-              "type": "text"
-            },
-            {
-              "key": "category",
-              "value": "Web Design",
-              "type": "text"
-            },
-            {
-              "key": "client",
-              "value": "TechCorp Inc",
-              "type": "text"
-            },
-            {
-              "key": "projectDate",
-              "value": "2024-03-15",
-              "type": "text"
-            },
-            {
-              "key": "technologies",
-              "value": "React, Node.js, MongoDB",
-              "type": "text"
-            },
-            {
-              "key": "status",
-              "value": "Completed",
-              "type": "text"
-            },
-            {
-              "key": "designer",
-              "value": "Alex Smith",
-              "type": "text"
-            }
-          ]
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [{
+          "key": "Content-Type",
+          "value": "application/json"
+        }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Product Name\",\n  \"price\": \"1299\"\n}"
         },
         "url": {
-          "raw": "http://localhost:3000/api/portfolio",
+          "raw": "http://localhost:3000/api/product/{{productId}}",
           "protocol": "http",
           "host": ["localhost"],
           "port": "3000",
-          "path": ["api", "portfolio"]
+          "path": ["api", "product", "{{productId}}"]
+        }
+      }
+    },
+    {
+      "name": "Update Gallery",
+      "request": {
+        "method": "PUT",
+        "header": [{
+          "key": "Content-Type",
+          "value": "application/json"
+        }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Gallery Title\",\n  \"description\": \"Updated description\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/gallery/{{galleryId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "gallery", "{{galleryId}}"]
+        }
+      }
+    },
+    {
+      "name": "Update Property",
+      "request": {
+        "method": "PUT",
+        "header": [{
+          "key": "Content-Type",
+          "value": "application/json"
+        }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Property Title\",\n  \"price\": \"600000\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/property/{{propertyId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "property", "{{propertyId}}"]
+        }
+      }
+    },
+    {
+      "name": "Update Recipe",
+      "request": {
+        "method": "PUT",
+        "header": [{
+          "key": "Content-Type",
+          "value": "application/json"
+        }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Recipe Name\",\n  \"cookTime\": \"120 minutes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/recipe/{{recipeId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "recipe", "{{recipeId}}"]
+        }
+      }
+    },
+    {
+      "name": "Update Portfolio",
+      "request": {
+        "method": "PUT",
+        "header": [{
+          "key": "Content-Type",
+          "value": "application/json"
+        }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Portfolio Title\",\n  \"status\": \"In Progress\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/portfolio/{{portfolioId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "portfolio", "{{portfolioId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/product/{{productId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "product", "{{productId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Gallery",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/gallery/{{galleryId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "gallery", "{{galleryId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Property",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/property/{{propertyId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "property", "{{propertyId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Recipe",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/recipe/{{recipeId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "recipe", "{{recipeId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Portfolio",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/portfolio/{{portfolioId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "portfolio", "{{portfolioId}}"]
         }
       }
     }

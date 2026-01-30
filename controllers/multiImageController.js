@@ -272,6 +272,128 @@ const multiImageController = {
         error: error.message
       });
     }
+  },
+
+  // PUT APIs
+  updateProduct: async (req, res) => {
+    try {
+      const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!product) {
+        return res.status(404).json({ success: false, message: 'Product not found' });
+      }
+      res.status(200).json({ success: true, data: product });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error updating product', error: error.message });
+    }
+  },
+
+  updateGallery: async (req, res) => {
+    try {
+      const gallery = await Gallery.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!gallery) {
+        return res.status(404).json({ success: false, message: 'Gallery not found' });
+      }
+      res.status(200).json({ success: true, data: gallery });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error updating gallery', error: error.message });
+    }
+  },
+
+  updateProperty: async (req, res) => {
+    try {
+      const property = await Property.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!property) {
+        return res.status(404).json({ success: false, message: 'Property not found' });
+      }
+      res.status(200).json({ success: true, data: property });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error updating property', error: error.message });
+    }
+  },
+
+  updateRecipe: async (req, res) => {
+    try {
+      const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!recipe) {
+        return res.status(404).json({ success: false, message: 'Recipe not found' });
+      }
+      res.status(200).json({ success: true, data: recipe });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error updating recipe', error: error.message });
+    }
+  },
+
+  updatePortfolio: async (req, res) => {
+    try {
+      const portfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!portfolio) {
+        return res.status(404).json({ success: false, message: 'Portfolio not found' });
+      }
+      res.status(200).json({ success: true, data: portfolio });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error updating portfolio', error: error.message });
+    }
+  },
+
+  // DELETE APIs
+  deleteProduct: async (req, res) => {
+    try {
+      const product = await Product.findByIdAndDelete(req.params.id);
+      if (!product) {
+        return res.status(404).json({ success: false, message: 'Product not found' });
+      }
+      res.status(200).json({ success: true, message: 'Product deleted successfully' });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error deleting product', error: error.message });
+    }
+  },
+
+  deleteGallery: async (req, res) => {
+    try {
+      const gallery = await Gallery.findByIdAndDelete(req.params.id);
+      if (!gallery) {
+        return res.status(404).json({ success: false, message: 'Gallery not found' });
+      }
+      res.status(200).json({ success: true, message: 'Gallery deleted successfully' });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error deleting gallery', error: error.message });
+    }
+  },
+
+  deleteProperty: async (req, res) => {
+    try {
+      const property = await Property.findByIdAndDelete(req.params.id);
+      if (!property) {
+        return res.status(404).json({ success: false, message: 'Property not found' });
+      }
+      res.status(200).json({ success: true, message: 'Property deleted successfully' });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error deleting property', error: error.message });
+    }
+  },
+
+  deleteRecipe: async (req, res) => {
+    try {
+      const recipe = await Recipe.findByIdAndDelete(req.params.id);
+      if (!recipe) {
+        return res.status(404).json({ success: false, message: 'Recipe not found' });
+      }
+      res.status(200).json({ success: true, message: 'Recipe deleted successfully' });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error deleting recipe', error: error.message });
+    }
+  },
+
+  deletePortfolio: async (req, res) => {
+    try {
+      const portfolio = await Portfolio.findByIdAndDelete(req.params.id);
+      if (!portfolio) {
+        return res.status(404).json({ success: false, message: 'Portfolio not found' });
+      }
+      res.status(200).json({ success: true, message: 'Portfolio deleted successfully' });
+    } catch (error) {
+      res.status(400).json({ success: false, message: 'Error deleting portfolio', error: error.message });
+    }
   }
 };
 
