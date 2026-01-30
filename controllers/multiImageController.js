@@ -191,6 +191,87 @@ const multiImageController = {
         error: error.message
       });
     }
+  },
+
+  // GET APIs
+  getAllProducts: async (req, res) => {
+    try {
+      const products = await Product.find();
+      res.status(200).json({
+        success: true,
+        data: products
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Error fetching products',
+        error: error.message
+      });
+    }
+  },
+
+  getAllGalleries: async (req, res) => {
+    try {
+      const galleries = await Gallery.find();
+      res.status(200).json({
+        success: true,
+        data: galleries
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Error fetching galleries',
+        error: error.message
+      });
+    }
+  },
+
+  getAllProperties: async (req, res) => {
+    try {
+      const properties = await Property.find();
+      res.status(200).json({
+        success: true,
+        data: properties
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Error fetching properties',
+        error: error.message
+      });
+    }
+  },
+
+  getAllRecipes: async (req, res) => {
+    try {
+      const recipes = await Recipe.find();
+      res.status(200).json({
+        success: true,
+        data: recipes
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Error fetching recipes',
+        error: error.message
+      });
+    }
+  },
+
+  getAllPortfolios: async (req, res) => {
+    try {
+      const portfolios = await Portfolio.find();
+      res.status(200).json({
+        success: true,
+        data: portfolios
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Error fetching portfolios',
+        error: error.message
+      });
+    }
   }
 };
 

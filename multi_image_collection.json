@@ -365,7 +365,122 @@
             },
             {
               "key": "description",
-              "value": "Modern e-commerce platform with responsive design",
+              "value": "Modern e-commerce website with responsive design",
+              "type": "text"
+            },
+            {
+              "key": "client",
+              "value": "TechCorp Inc",
+              "type": "text"
+            },
+            {
+              "key": "category",
+              "value": "Web Design",
+              "type": "text"
+            },
+            {
+              "key": "technologies",
+              "value": "React, Node.js, MongoDB",
+              "type": "text"
+            },
+            {
+              "key": "duration",
+              "value": "3 months",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "Completed",
+              "type": "text"
+            },
+            {
+              "key": "designer",
+              "value": "Alex Smith",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/portfolio",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "portfolio"]
+        }
+      }
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Get All Galleries",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/galleries",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "galleries"]
+        }
+      }
+    },
+    {
+      "name": "Get All Properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/properties",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "properties"]
+        }
+      }
+    },
+    {
+      "name": "Get All Recipes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/recipes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "recipes"]
+        }
+      }
+    },
+    {
+      "name": "Get All Portfolios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/portfolios",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "portfolios"]
+        }
+      }
+    }
+  ]
+}mmerce platform with responsive design",
               "type": "text"
             },
             {
