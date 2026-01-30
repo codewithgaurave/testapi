@@ -1,16 +1,16 @@
-class Gallery {
-  constructor(data) {
-    this.id = Date.now();
-    this.title = data.title;
-    this.description = data.description;
-    this.category = data.category;
-    this.event = data.event;
-    this.location = data.location;
-    this.date = data.date;
-    this.photographer = data.photographer;
-    this.images = data.images || [];
-    this.createdAt = new Date();
-  }
-}
+const mongoose = require('mongoose');
 
-module.exports = Gallery;
+const gallerySchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  description: { type: String, required: true },
+  category: { type: String, required: true },
+  event: { type: String, required: true },
+  location: { type: String, required: true },
+  date: { type: String, required: true },
+  photographer: { type: String, required: true },
+  images: [{ type: String, required: true }]
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Gallery', gallerySchema);

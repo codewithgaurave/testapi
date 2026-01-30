@@ -35,6 +35,7 @@ const multiImageController = {
       };
 
       const product = new Product(productData);
+      await product.save();
       res.status(201).json({
         success: true,
         message: 'Product created successfully',
@@ -71,6 +72,7 @@ const multiImageController = {
       };
 
       const gallery = new Gallery(galleryData);
+      await gallery.save();
       res.status(201).json({
         success: true,
         message: 'Gallery created successfully',
@@ -107,6 +109,7 @@ const multiImageController = {
       };
 
       const property = new Property(propertyData);
+      await property.save();
       res.status(201).json({
         success: true,
         message: 'Property created successfully',
@@ -143,6 +146,7 @@ const multiImageController = {
       };
 
       const recipe = new Recipe(recipeData);
+      await recipe.save();
       res.status(201).json({
         success: true,
         message: 'Recipe created successfully',
@@ -179,6 +183,7 @@ const multiImageController = {
       };
 
       const portfolio = new Portfolio(portfolioData);
+      await portfolio.save();
       res.status(201).json({
         success: true,
         message: 'Portfolio created successfully',

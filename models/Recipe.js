@@ -1,18 +1,18 @@
-class Recipe {
-  constructor(data) {
-    this.id = Date.now();
-    this.name = data.name;
-    this.description = data.description;
-    this.ingredients = data.ingredients;
-    this.instructions = data.instructions;
-    this.cookTime = data.cookTime;
-    this.servings = data.servings;
-    this.difficulty = data.difficulty;
-    this.cuisine = data.cuisine;
-    this.chef = data.chef;
-    this.images = data.images || [];
-    this.createdAt = new Date();
-  }
-}
+const mongoose = require('mongoose');
 
-module.exports = Recipe;
+const recipeSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  ingredients: { type: String, required: true },
+  instructions: { type: String, required: true },
+  cookTime: { type: String, required: true },
+  servings: { type: Number, required: true },
+  difficulty: { type: String, required: true },
+  cuisine: { type: String, required: true },
+  chef: { type: String, required: true },
+  images: [{ type: String, required: true }]
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Recipe', recipeSchema);

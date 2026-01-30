@@ -1,17 +1,17 @@
-class Portfolio {
-  constructor(data) {
-    this.id = Date.now();
-    this.title = data.title;
-    this.description = data.description;
-    this.category = data.category;
-    this.client = data.client;
-    this.projectDate = data.projectDate;
-    this.technologies = data.technologies;
-    this.status = data.status;
-    this.designer = data.designer;
-    this.images = data.images || [];
-    this.createdAt = new Date();
-  }
-}
+const mongoose = require('mongoose');
 
-module.exports = Portfolio;
+const portfolioSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  description: { type: String, required: true },
+  category: { type: String, required: true },
+  client: { type: String, required: true },
+  projectDate: { type: String, required: true },
+  technologies: { type: String, required: true },
+  status: { type: String, required: true },
+  designer: { type: String, required: true },
+  images: [{ type: String, required: true }]
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Portfolio', portfolioSchema);

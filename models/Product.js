@@ -1,16 +1,16 @@
-class Product {
-  constructor(data) {
-    this.id = Date.now();
-    this.name = data.name;
-    this.description = data.description;
-    this.price = data.price;
-    this.category = data.category;
-    this.brand = data.brand;
-    this.stock = data.stock;
-    this.mainImage = data.mainImage;
-    this.thumbnailImage = data.thumbnailImage;
-    this.createdAt = new Date();
-  }
-}
+const mongoose = require('mongoose');
 
-module.exports = Product;
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  price: { type: Number, required: true },
+  category: { type: String, required: true },
+  brand: { type: String, required: true },
+  stock: { type: Number, required: true },
+  mainImage: { type: String, required: true },
+  thumbnailImage: { type: String, required: true }
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Product', productSchema);
