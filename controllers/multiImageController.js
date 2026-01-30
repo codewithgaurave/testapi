@@ -201,12 +201,17 @@ const multiImageController = {
   // GET APIs
   getAllProducts: async (req, res) => {
     try {
+      console.log('Fetching products from database...');
       const products = await Product.find();
+      console.log('Products found:', products.length);
+      console.log('Products data:', products);
       res.status(200).json({
         success: true,
+        count: products.length,
         data: products
       });
     } catch (error) {
+      console.error('Error in getAllProducts:', error);
       res.status(500).json({
         success: false,
         message: 'Error fetching products',
@@ -398,6 +403,61 @@ const multiImageController = {
       res.status(200).json({ success: true, message: 'Portfolio deleted successfully' });
     } catch (error) {
       res.status(400).json({ success: false, message: 'Error deleting portfolio', error: error.message });
+    }
+  },
+
+  // Test route to create sample data
+  createSampleData: async (req, res) => {
+    try {
+      const sampleProduct = new Product({
+        name: 'Sample iPhone',
+        description: 'Test product',
+        price: 999,
+        category: 'Electronics',
+        brand: 'Apple',
+        stock: 10,
+        mainImage: 'https://via.placeholder.com/300x300',
+        thumbnailImage: 'https://via.placeholder.com/150x150'
+      });
+      await sampleProduct.save();
+      
+      res.status(201).json({
+        success: true,
+        message: 'Sample data created',
+        data: sampleProduct
+      });
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        message: 'Error creating sample data',
+        error: error.message
+      });
+    }
+  },
+
+  // Debug route to check database
+  debugDatabase: async (req, res) => {
+    try {
+      const mongoose = require('mongoose');
+      const dbState = mongoose.connection.readyState;
+      const collections = await mongoose.connection.db.listCollections().toArray();
+      
+      const productCount = await Product.countDocuments();
+      const allProducts = await Product.find().lean();
+      
+      res.status(200).json({
+        success: true,
+        dbState: dbState, // 0=disconnected, 1=connected, 2=connecting, 3=disconnecting
+        collections: collections.map(c => c.name),
+        productCount: productCount,
+        products: allProducts
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'Debug error',
+        error: error.message
+      });
     }
   }
 };

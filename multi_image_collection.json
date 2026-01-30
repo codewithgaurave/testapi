@@ -653,6 +653,34 @@
           "path": ["api", "portfolio", "{{portfolioId}}"]
         }
       }
+    },
+    {
+      "name": "Create Sample Data (Test)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/test/sample-data",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "test", "sample-data"]
+        }
+      }
+    },
+    {
+      "name": "Debug Database",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/debug/database",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "debug", "database"]
+        }
+      }
     }
   ]
 }

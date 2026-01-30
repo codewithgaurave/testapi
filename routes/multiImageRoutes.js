@@ -40,4 +40,8 @@ router.delete('/property/:id', multiImageController.deleteProperty);
 router.delete('/recipe/:id', multiImageController.deleteRecipe);
 router.delete('/portfolio/:id', multiImageController.deletePortfolio);
 
+// Test route
+router.post('/test/sample-data', multiImageController.createSampleData);
+router.get('/debug/database', multiImageController.debugDatabase);
+
 module.exports = router;
